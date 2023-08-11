@@ -27,7 +27,7 @@ Following the data cleansing process, I employed a function for performing a tra
 
 ## The flow
 
-Contemplating the project from a product perspective, we have established the subsequent workflow:
+Contemplating the project from a product perspective, I have established the subsequent workflow:
 
 1. The user submits a comment.
 1. The comment undergoes classification into either toxic or non-toxic categories - a binary classification.
@@ -47,5 +47,38 @@ Contemplating the project from a product perspective, we have established the su
 
  * 1st stage models:
    ![result 1st stage models](https://github.com/sivanitzhaki/NLP-project-Toxic-Comment-Classification/assets/85245749/ffe28153-a907-42a1-a0fd-9f6674c5c386)
-   
 
+   Both models achieved a high level of accuracy and exhibited close performance. However, the CNN model outperformed the random forest classifier with a superior score and significantly faster processing speed.
+
+ * 2nd stage models:
+![result 2nd stage models](https://github.com/sivanitzhaki/NLP-project-Toxic-Comment-Classification/assets/85245749/d8428615-d5a7-4a9e-ae73-3f9f6781ec95)
+
+- Both models reached a high level of accuracy of more than 85%.
+- The LSTM model, in particular, demonstrates a superior outcome.
+- However, the outcomes reveal a shared challenge for both models in distinguishing between two specific levels of toxicity - threat and identity hate.
+
+  
+![train validation acc score per epoch](https://github.com/sivanitzhaki/NLP-project-Toxic-Comment-Classification/assets/85245749/206ec1a3-5558-42c4-a817-a32ca3f5883f)
+
+- The CNN model seems to underfit - Probably because the imbalanced dataset.
+- A possible solution for that would be to train for less epochs. But I decided that two epochs is not long enough to the learning stage.
+- Both models learn quite fast, probably due to imbalanced dataset.
+
+  ## User interface
+  
+  Finally, I created a user interface where a user could enter a comment and get its classification in real time.
+
+  Here is an example:
+  ![interface](https://github.com/sivanitzhaki/NLP-project-Toxic-Comment-Classification/assets/85245749/94f658f9-f92e-4f06-a9af-2845d66508a1)
+
+## Further Work
+
+1. To develope the model further I suggest to perform data augmenattion for the unrepersented labels.
+
+1. Transformers & BERT - while examining different models, I experimented with BERT but had many issues implementing it due to computing power. I recommend trying to find a suitable BERT model and fine-tuning it in order to get better results.
+
+1. Train the 2nd stage models on a data set that has major\only toxic comments and check if this solves the problem of identifying the levels of toxicity that the models failed to learn.
+
+1. Additional evaluation metrics can be examined.
+
+  
