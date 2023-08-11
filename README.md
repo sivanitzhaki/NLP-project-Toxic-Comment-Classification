@@ -46,5 +46,6 @@ Contemplating the project from a product perspective, we have established the su
 ## Results
 
  * 1st stage models:
+   ![result 1st stage models](https://github.com/sivanitzhaki/NLP-project-Toxic-Comment-Classification/assets/85245749/ffe28153-a907-42a1-a0fd-9f6674c5c386)
    
 
